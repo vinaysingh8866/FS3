@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script>
+        const difference = (num) => {
+            let val = (num - 13) > 13 ? (num - 13) * 2 : (num - 13);
+            return Math.abs(val);
+        }
+
+        const greeter = (myArray, counter) => {
+            let greetText = "hello";
+            for (const val in myArray) {
+                console.log(greetText, myArray[val]);
+            }
+        }
+
+        let colors = ['red', 'green', 'blue'];
+        let capitalisedColors = (colorsAr) => colorsAr.map(x => x.charAt(0).toUpperCase() + x.slice(1));
+
+        let values = [1, 2, 3, 4];
+        let filterLessThan20 = (valAr) => valAr.filter(va => va < 20);
+
+        let calculateSum = (valAr) => valAr.reduce(
+            (previousValue, currentValue) => previousValue + currentValue, 0
+        )
+
+        let calculateProduct = (valAr) => valAr.reduce(
+            (previousValue, currentValue) => previousValue * currentValue, 1
+        )
+        console.log(calculateProduct(values));
+        console.log(calculateSum(values));
+        console.log(filterLessThan20(values));
+        console.log(capitalisedColors(colors));
+        greeter(["Pickle", "Rick"], 2)
+        console.log(difference(32))
+        console.log(difference(11))
+    </script>
+</body>
+
+</html>
